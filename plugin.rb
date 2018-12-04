@@ -47,17 +47,8 @@ after_initialize do
   [
     # '../app/controllers/teachable_admin_controller.rb',
     '../app/controllers/teachable_webhook_controller.rb',
+    '../app/mailers/teachable_invite_mailer.rb',
     '../app/jobs/regular/sync_teachable_users.rb',
-    # '../app/jobs/scheduled/teachable_sync_patrons_to_groups.rb',
-    # '../app/jobs/scheduled/teachable_update_tokens.rb',
-    # '../app/jobs/onceoff/update_brand_images.rb',
-    # '../app/jobs/onceoff/migrate_teachable_user_infos.rb',
-    # '../lib/api.rb',
-    # '../lib/seed.rb',
-    # '../lib/campaign.rb',
-    # '../lib/pledge.rb',
-    # '../lib/patron.rb',
-    # '../lib/tokens.rb'
   ].each { |path| load File.expand_path(path, __FILE__) }
   
 end

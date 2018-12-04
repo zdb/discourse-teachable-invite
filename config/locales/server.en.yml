@@ -1,3 +1,15 @@
 en:
   site_settings:
     teachable_enabled: "Enable Teachable plugin"
+
+  teachable_invite_mailer:
+    title: "Teachable Invite Mailer"
+    subject_template: "You've been invited to join the %{site_title}!"
+    text_body_template: |
+      Welcome to the %{site_title}!  
+
+      This is a members only forum where you can ask questions, discuss the therapy, and connect with others.  
+      
+      Please click the link below to create your account:
+      
+      %{invite_link}
