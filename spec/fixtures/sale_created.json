@@ -1,0 +1,67 @@
+[
+  {
+    "type": "Sale.created",
+    "id": 18900212,
+    "livemode": true,
+    "created": "2018-11-12T20:05:54+00:00",
+    "hook_event_id": 1,
+    "object": {
+      "id": 18900212,
+      "price": 0,
+      "currency": "USD",
+      "is_active": true,
+      "is_recurring": false,
+      "user_id": 15747624,
+      "school_id": 145222,
+      "final_price": 0,
+      "course": {
+        "id": 302950,
+        "name": "Overcoming Social Anxiety",
+        "url": "https://therapy.socialanxietyinstitute.org/courses/302950",
+        "friendly_url": "overcoming-social-anxiety",
+        "meta_description": "Step by Step",
+        "description": "\\u003cp\\u003e\\u003cspan style=\"font-size: 42px;\"\\u003eLet me ask you a question...\\u003c/span\\u003e\n\\u003c/p\\u003e\n\\u003cp\\u003e\\u003cspan style=\"font-size: 42px;\"\\u003e\\u003cbr\\u003e\\u003c/span\\u003e\n\\u003c/p\\u003e\n\\u003cul\\u003e\n \\u003cli\\u003e\\u003cspan style=\"font-size: 18px;\"\\u003eAre you self conscious?\\u003c/span\\u003e\\u003c/li\\u003e\n \\u003cli\\u003e\\u003cspan style=\"font-size: 18px;\"\\u003eIs you anxiety causing physical symptoms?\\u003c/span\\u003e\\u003c/li\\u003e\n \\u003cli\\u003e\\u003cspan style=\"font-size: 18px;\"\\u003eDo you wish you had an effective step by step road map to follow?\\u003c/span\\u003e\\u003c/li\\u003e\n\\u003c/ul\\u003e\n\\u003cp\\u003e\\u003cbr\\u003e\n\\u003c/p\\u003e",
+        "author_bio": {
+          "created_at": "2018-05-16T20:43:53Z",
+          "headline": "Ph.D., Psychologist",
+          "profile_image_url": "https://www.filepicker.io/api/file/stu6FHTsyHFf7VEEyLXA",
+          "bio": "\\u003cp\\u003e\\u003cstrong\\u003eThe Social Anxiety Institute is the foremost institution in the world for treating social anxiety.  The Institute Director, Dr. Thomas A Richards,\n has specialized in social anxiety since the early 1990s and the Social \nAnxiety Institute has had many thousands of patients.  Dr. Richards \nsuffered from social anxiety himself until he was about 40, and is one \nof the world's leading clinical authorities on the subject.\n \\u003c/strong\\u003e\n\\u003c/p\\u003e",
+          "position": null,
+          "user_id": null,
+          "name": "Dr. Thomas A Richards",
+          "id": 159229,
+          "meta": {
+            "class": "authorbio",
+            "url": "/author_bios/159229",
+            "name": "Dr. Thomas A Richards",
+            "description": "",
+            "image_url": null
+          }
+        }
+      },
+      "product": {
+        "id": 863254,
+        "is_recurring": false,
+        "price": 0,
+        "name": "FREE FOR ME",
+        "currency": "USD"
+      },
+      "user": {
+        "id": 15747624,
+        "role": "student",
+        "email": "webhook@mailinator.com",
+        "name": "Webhooktest",
+        "school_id": 145222,
+        "src": null,
+        "first_touch": null,
+        "last_touch": null,
+        "last_sign_in_at": "2018-11-12T19:56:25Z",
+        "sign_in_count": 1,
+        "unsubscribe_from_marketing_emails": true
+      },
+      "coupon": null,
+      "affiliate": null,
+      "transactions": []
+    }
+  }
+]
