@@ -6,6 +6,7 @@ class ::Teachable::TeachableWebhookController < ApplicationController
   skip_before_action :redirect_to_login_if_required, :preload_json, :check_xhr, :verify_authenticity_token
 
   TRIGGERS = ['sale.created']
+  COURSES = [302950]
 
   def index 
     unless is_valid?
@@ -28,6 +29,6 @@ class ::Teachable::TeachableWebhookController < ApplicationController
   end
 
   def is_valid?
-    TRIGGERS.include?(event['type'].downcase)
+    TRIGGERS.include?(event['type'].downcase) and COURSES.include?(event['data']['object']['course_id'])
   end
 end
