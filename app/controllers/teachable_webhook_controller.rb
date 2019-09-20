@@ -5,7 +5,7 @@ class ::Teachable::TeachableWebhookController < ApplicationController
 
   skip_before_action :redirect_to_login_if_required, :preload_json, :check_xhr, :verify_authenticity_token
 
-  TRIGGERS = ['sale.created']
+  TRIGGERS = ['enrollment.created']
   COURSES = [302950]
 
   def index 
@@ -14,7 +14,7 @@ class ::Teachable::TeachableWebhookController < ApplicationController
     end
     
     case event['type'].downcase
-      when 'sale.created'
+      when 'enrollment.created'
         Jobs.enqueue(:sync_teachable_users, json: event)
     end
 
@@ -29,6 +29,10 @@ class ::Teachable::TeachableWebhookController < ApplicationController
   end
 
   def is_valid?
-    TRIGGERS.include?(event['type'].downcase) and COURSES.include?(event['data']['object']['course_id'])
+    begin
+      TRIGGERS.include?(event['type'].downcase) and COURSES.include?(event['object']['course_id'])
+    rescue
+      false
+    end
   end
 end
