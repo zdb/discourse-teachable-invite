@@ -5,12 +5,11 @@ module ::Jobs
       email = json['object']['user']['email']
       user_id = json['object']['user']['id']
 
-      invite = Invite.create_invite_by_email(email, User.find_by_id(-1), 
-        topic: nil,
-        group_ids: nil,
-        custom_message: nil,
+      invited_by = User.find_by_id(-1)
+      invite = Invite.generate(invited_by, {
+        email: email,
         send_email: false
-      )
+      })
 
       message = TeachableInviteMailer.send_invite(invite)
       Email::Sender.new(message, :invite).send

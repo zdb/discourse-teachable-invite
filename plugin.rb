@@ -1,6 +1,6 @@
 # name: Teachable
 # about:
-# version: 0.2
+# version: 0.2.1
 # authors: zdb
 # url: https://github.com/zdb
 
