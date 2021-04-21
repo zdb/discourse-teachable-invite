@@ -3,7 +3,7 @@ module ::Jobs
     def execute(args)
       json = args[:json]
       email = json['object']['user']['email']
-      user_id = json['object']['user']['id']
+      invited_by = User.find_by_id(-1)
       invite = Invite.generate(invited_by, {
         email: email,
         skip_email: true
