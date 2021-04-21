@@ -13,11 +13,11 @@ class ::Teachable::TeachableWebhookController < ApplicationController
       case event['type'].downcase
         when 'enrollment.created'
           Jobs.enqueue(:sync_teachable_users, json: event)
-          render body: nil, status: 200
+          return render body: nil, status: 200
       end
     end
 
-    render body: nil, status: 400
+    return render body: nil, status: 400
   end
 
   def event
