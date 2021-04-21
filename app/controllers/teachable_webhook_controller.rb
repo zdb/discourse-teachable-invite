@@ -13,10 +13,11 @@ class ::Teachable::TeachableWebhookController < ApplicationController
       case event['type'].downcase
         when 'enrollment.created'
           Jobs.enqueue(:sync_teachable_users, json: event)
+          render body: nil, status: 200
       end
     end
-    
-    render body: nil, status: 200
+
+    render body: nil, status: 400
   end
 
   def event
@@ -26,6 +27,7 @@ class ::Teachable::TeachableWebhookController < ApplicationController
   end
 
   def is_valid?
-    TRIGGERS.include?(event['type'].downcase) and COURSES.include?(event['object']['course_id'])
+    TRIGGERS.include?(event['type'].downcase) and 
+    COURSES.include?(event['object']['course_id'])
   end
 end
