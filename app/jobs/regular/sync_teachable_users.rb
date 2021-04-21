@@ -5,14 +5,14 @@ module ::Jobs
       email = json['object']['user']['email']
       user_id = json['object']['user']['id']
 
+      # https://github.com/discourse/discourse/blob/master/app/models/invite.rb
       invited_by = User.find_by_id(-1)
       invite = Invite.generate(invited_by, {
         email: email,
-        send_email: false
+        skip_email: true
       })
 
-      message = TeachableInviteMailer.send_invite(invite)
-      Email::Sender.new(message, :invite).send
+      TeachableInviteMailer.send_invite(invite)
     end
   end
 end
